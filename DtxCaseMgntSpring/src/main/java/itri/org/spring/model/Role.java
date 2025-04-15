@@ -5,7 +5,7 @@ import java.util.Set;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "role")
+@Table(name = "\"role\"")
 public class Role implements Serializable {
     private static final long serialVersionUID = 78415263L;
 
@@ -13,7 +13,7 @@ public class Role implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "role_name", nullable = false, unique = true, length = 50)
+    @Column(name = "\"role_name\"", nullable = false, unique = true, length = 50)
     private String roleName;
 
     @OneToMany(mappedBy = "role", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)

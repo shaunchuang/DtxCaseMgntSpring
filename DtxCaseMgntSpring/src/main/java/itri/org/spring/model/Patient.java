@@ -6,7 +6,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 @Entity
-@Table(name = "patient")
+@Table(name = "\"patient\"")
 public class Patient implements Serializable {
     private static final long serialVersionUID = 1822843074531976309L;
 
@@ -14,16 +14,16 @@ public class Patient implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "idno", nullable = false, unique = true, length = 50)
+    @Column(name = "\"idno\"", nullable = false, unique = true, length = 50)
     private String idno;
 
-    @Column(name = "name", nullable = false, length = 50)
+    @Column(name = "\"name\"", nullable = false, length = 50)
     private String name;
 
-    @Column(name = "gender", length = 10)
+    @Column(name = "\"gender\"", length = 10)
     private String gender;
 
-    @Column(name = "birth")
+    @Column(name = "\"birth\"")
     @Temporal(TemporalType.DATE)
     private Date birth;
 
@@ -41,37 +41,37 @@ public class Patient implements Serializable {
         return age;
     }
 
-    @Column(name = "city", length = 50)
+    @Column(name = "\"city\"", length = 50)
     private String city;
 
-    @Column(name = "district", length = 50)
+    @Column(name = "\"district\"", length = 50)
     private String district;
 
-    @Column(name = "address", length = 255)
+    @Column(name = "\"address\"", length = 255)
     private String address;
 
-    @Column(name = "emergency_contact", length = 50)
+    @Column(name = "\"emergency_contact\"", length = 50)
     private String emergencyContact;
 
-    @Column(name = "emergency_phone", length = 50)
+    @Column(name = "\"emergency_phone\"", length = 50)
     private String emergencyPhone;
 
-    @Column(name = "emergency_relation", length = 50)
+    @Column(name = "\"emergency_relation\"", length = 50)
     private String emergencyRelation;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "patient_history_disease",
+    @JoinTable(name = "\"patient_history_disease\"",
         joinColumns = @JoinColumn(name = "patient_id"),
         inverseJoinColumns = @JoinColumn(name = "history_disease_id"))
     private java.util.List<HistoryDisease> historyDisease;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "patient_medical_history",
+    @JoinTable(name = "\"patient_medical_history\"",
         joinColumns = @JoinColumn(name = "patient_id"),
         inverseJoinColumns = @JoinColumn(name = "medical_history_id"))
     private java.util.List<MedicalHistory> medicalHistory;
 
-    @Column(name = "disease_id")
+    @Column(name = "\"disease_id\"")
     private Long diseaseId;
 
     // getters and setters ...

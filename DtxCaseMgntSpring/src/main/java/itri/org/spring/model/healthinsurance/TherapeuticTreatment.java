@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "therapeutic_treatment")
+@Table(name = "\"therapeutic_treatment\"")
 public class TherapeuticTreatment implements Serializable {
 
     private static final long serialVersionUID = 894896545L;
@@ -15,26 +15,26 @@ public class TherapeuticTreatment implements Serializable {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "hi_record_id", nullable = false)
+    @JoinColumn(name = "\"hi_record_id\"", nullable = false)
     private HealthInsuranceRecord hiRecord;
 
-    @Column(name = "treatment_code", length = 50)
+    @Column(name = "\"treatment_code\"", length = 50)
     private String treatmentCode;
 
-    @Column(name = "total_mount", length = 50)
+    @Column(name = "\"total_mount\"", length = 50)
     private String totalMount;
 
-    @Column(name = "point")
+    @Column(name = "\"point\"")
     private int point;
 
-    @Column(name = "executive_id", nullable = false)
+    @Column(name = "\"executive_id\"", nullable = false)
     private Long executiveId;
 
-    @Column(name = "start_time")
+    @Column(name = "\"start_time\"")
     @Temporal(TemporalType.TIME)
     private Date startTime;
 
-    @Column(name = "end_time")
+    @Column(name = "\"end_time\"")
     @Temporal(TemporalType.TIME)
     private Date endTime;
 

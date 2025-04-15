@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "icd_code")
+@Table(name = "\"icd_code\"")
 public class IcdCode implements Serializable {
 
     private static final long serialVersionUID = 74523658L;
@@ -14,31 +14,31 @@ public class IcdCode implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "code", nullable = false, length = 20)
+    @Column(name = "\"code\"", nullable = false, length = 20)
     private String code; // 診斷碼
 
-    @Column(name = "pure_code", length = 20)
+    @Column(name = "\"pure_code\"", length = 20)
     private String pureCode; // 診斷碼(去除.)
 
-    @Column(name = "name", length = 100)
+    @Column(name = "\"name\"", length = 100)
     private String name; // 診斷中文名稱
 
-    @Column(name = "en_name", length = 100)
+    @Column(name = "\"en_name\"", length = 100)
     private String enName; // 診斷英文名稱
 
-    @Column(name = "create_time")
+    @Column(name = "\"create_time\"")
     private Date createTime; // 建立時間
 
-    @Column(name = "modify_time")
+    @Column(name = "\"modify_time\"")
     private Date modifyTime; // 更新時間
 
-    @Column(name = "creator_id")
+    @Column(name = "\"creator_id\"")
     private Long creator; // 建立者
 
-    @Column(name = "modifier_id")
+    @Column(name = "\"modifier_id\"")
     private Long modifier; // 更新者
 
-    @Column(name = "delete_mark")
+    @Column(name = "\"delete_mark\"")
     private Boolean deleteMark = false; // 刪除註記
 
     public Long getId() {

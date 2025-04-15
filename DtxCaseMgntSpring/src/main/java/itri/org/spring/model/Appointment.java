@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-@Table(name = "appointment")
+@Table(name = "\"appointment\"")
 public class Appointment implements Serializable {
 
     private static final long serialVersionUID = 8946512L;
@@ -14,20 +14,20 @@ public class Appointment implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "case_no", nullable = false)
+    @Column(name = "\"case_no\"", nullable = false)
     private Long caseNo; // 個案表單號
 
-    @Column(name = "available_slot_id", nullable = false)
+    @Column(name = "\"available_slot_id\"", nullable = false)
     private Long availableSlotId; // 關聯可預約時段
 
-    @Column(name = "checkin_time")
+    @Column(name = "\"checkin_time\"")
     @Temporal(TemporalType.TIME)
     private Date checkinTime; // 實際報到時間
 
-    @Column(name = "note")
+    @Column(name = "\"note\"")
     private String note; // 相關備註
 
-    @Column(name = "collaborate_id")
+    @Column(name = "\"collaborate_id\"")
     private String collaborateId; // 協同人員
 
     public Long getId() {

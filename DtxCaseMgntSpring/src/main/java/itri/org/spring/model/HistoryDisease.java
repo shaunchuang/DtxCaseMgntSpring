@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "history_disease")
+@Table(name = "\"history_disease\"")
 public class HistoryDisease implements Serializable {
 
     private static final long serialVersionUID = 845123152L;
@@ -13,10 +13,10 @@ public class HistoryDisease implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "name", nullable = false, length = 100)
+    @Column(name = "\"name\"", nullable = false, length = 100)
     private String name; // 疾病名稱
 
-    @Column(name = "description", length = 255)
+    @Column(name = "\"description\"", length = 255)
     private String description; // 補充說明
 
     // Getters and Setters

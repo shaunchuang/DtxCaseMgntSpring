@@ -4,7 +4,7 @@ import java.io.Serializable;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user_role")
+@Table(name = "\"user_role\"")
 public class UserRole implements Serializable {
     private static final long serialVersionUID = 159487L;
 
@@ -13,11 +13,11 @@ public class UserRole implements Serializable {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "\"user_id\"", nullable = false)
     private User user;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "role_id", nullable = false)
+    @JoinColumn(name = "\"role_id\"", nullable = false)
     private Role role;
 
     public Long getId() {
