@@ -1,0 +1,84 @@
+/* 預約區塊樣式 */
+.appointment-blk {
+  /* 預約表格區塊特定樣式 */
+}
+
+/* 儀表板樣式 */
+.dashboard-blk {
+  font-size: 16px;
+}
+
+.d-column {
+  background: #FAFAFA;
+  border: 0.1px solid #bfbfbf;
+  border-radius: 5px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.d-column:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.d-column span.d-title {
+  position: relative;
+  padding-left: 30px;
+  font-weight: 600;
+}
+
+.d-column span.d-title:before {
+  font-family: 'FontAwesome';
+  font-weight: 900;
+  color: #ffffff;
+  background-color: #00CB96;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  margin-right: 5px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 13px;
+  box-sizing: border-box;
+}
+
+.d-today-column span.d-title:before {	
+  content: '\f073';	
+}
+
+.d-update-column span.d-title:before {	
+  content: '\f4fd';	
+}
+
+.d-abnormal-column span.d-title:before {	
+  content: '\e53f';	
+}
+
+.d-column span p {
+  display: inline;
+  font-weight: 600;
+  font-size: 24px;
+  color: #009E75;
+}
+
+/* 報到狀態按鈕樣式 */
+.badge-checkin {
+  border: 1px solid #777;
+  background: #ffffff;
+  color: #777;	
+  padding: 5px 7px;
+  font-size: 14px;
+  border-radius: 5px;	
+}
+
+/* 表格行點擊事件相關樣式 */
+.appointment-events tr td {
+  display: flex;
+  align-items: center;
+}

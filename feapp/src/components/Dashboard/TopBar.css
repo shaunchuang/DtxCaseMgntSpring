@@ -1,0 +1,93 @@
+/* 頂部欄樣式 */
+.top-bar {
+  background: #11101d;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+}
+
+#breadcrumbs {
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+#breadcrumbs li {
+  display: inline-block;
+}
+
+#breadcrumbs li:first-child a {
+  color: #00cb96;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#breadcrumbs li:not(:first-child) {
+  margin-left: 0.4em;
+}
+
+#breadcrumbs li:not(:first-child):before {
+  content: '|';
+  margin-right: 0.4em;
+}
+
+/* 用戶信息樣式 */
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.user-info .fa-user {
+  margin-right: 10px;
+}
+
+.message-alert {
+  position: relative;
+  margin-right: 25px;
+}
+
+.message-alert span {
+  position: absolute;
+  top: -5px;
+  right: -3px;
+  background: #ff5050;
+  color: #fff;
+  padding: 2px;
+  border-radius: 30px;
+  width: 5px;
+  height: 5px;
+  text-align: center;
+  font-size: 8px;
+}
+
+.message-alert:hover, .list-btn:hover {
+  cursor: pointer;
+}
+
+.dropdown {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.btn-secondary {
+  background-color: #11101d;
+  border: none;
+}
+
+.dropdown-menu {
+  min-width: 100px;
+  right: 0;
+  left: auto !important;
+}
+
+.archive-info {
+  display: inline-block;
+  margin-right: 50px;
+  cursor: pointer;
+}
+
+.archive-info span {
+  font-weight: 600;
+}

@@ -1,0 +1,52 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* 移除暗色主題，使用白色背景作為預設 */
+  color: #213547;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #50a3a2; /* 更改連結顏色以符合登入頁面主題 */
+  text-decoration: inherit;
+}
+a:hover {
+  color: #43d3a5; /* 更改懸停顏色以符合登入頁面主題 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2rem; /* 調小標題字體，更適合登入頁面 */
+  line-height: 1.1;
+}
+
+/* 移除全局按鈕樣式，讓元件特定樣式優先 */
+/* 保留一些共用屬性 */
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* 確保容器在自定義認證頁面中居中 */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* 移除暗色/亮色主題切換，使用統一的亮色主題 */

@@ -1,0 +1,234 @@
+/* 側邊欄樣式 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 63px;
+  background: #00cb96;
+  padding: 6px;
+  transition: all 0.5s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  width: 180px;
+}
+
+.sidebar .logo_content .logo,
+.sidebar .intro_content .logo {
+  color: #fff;
+  display: flex;
+  height: 30px;
+  width: 100%;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  font-size: 16px;
+}
+
+.sidebar.active .logo_content .logo,
+.sidebar.active .intro_content .logo {
+  opacity: 1;
+}
+
+.logo_content .logo span,
+.intro_content .logo span {
+  font-size: 20px !important;
+  margin-right: 5px;
+  letter-spacing: 2;
+}
+
+.logo_content .logo i,
+.intro_content .logo i {
+  font-size: 28px;
+  margin-right: 5px;
+}
+
+.logo_content .logo .logo_name,
+.intro_content .logo .logo_name {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.logo_name.logo_itri {
+  width: 150px;
+  height: 30px;
+  background-size: 100% 100%;
+  /* logo 背景圖設定 */
+}
+
+.intro_content {
+  position: absolute;
+  bottom: 5px;
+  font-size: 16px;
+  left: 10px;
+  color: #fff;
+  text-shadow: #737373 0.05em 0.05em 0.05em;
+}
+
+.sidebar #btn {
+  position: absolute;
+  color: #fff;
+  left: 50%;
+  top: 0px;
+  font-size: 20px;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  line-height: 50px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.sidebar.active #btn {
+  left: 90%;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+.sidebar ul li {
+  position: relative;
+  width: 100%;
+  padding: 2px 0;
+  list-style: none;
+  border-radius: 12px;
+}
+
+.sidebar ul li:first-child {
+  padding-top: 5px;
+}
+
+.sidebar .links_name {
+  width: 150px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+  white-space: break-spaces;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.sidebar.active .links_name {
+  opacity: 1;
+  pointer-events: auto;
+  text-shadow: 1px 1.5px #737373;
+  font-weight: 600;
+}
+
+.sidebar .fa-caret-down {
+  opacity: 0;
+}
+
+.sidebar.active .fa-caret-down {
+  opacity: 1;
+}
+
+.sidebar ul li .tooltip {
+  position: absolute;
+  left: 122px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  height: 35px;
+  width: 122px;
+  line-height: 35px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 5px rgba(0,0,0,0.2);
+  transition: 0s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sidebar.active ul li .tooltip {
+  display: none;	
+}
+
+.sidebar ul li:hover .tooltip {
+  top: 50%;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.sidebar ul li a {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.1s ease;
+  white-space: nowrap;
+  font-size: 18px;
+  padding: 8px 0;
+}
+
+ul.sub-menu li a {
+  font-size: 16px !important;
+  line-height: 16px !important;
+  padding: 5px 0;
+  white-space: break-spaces;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  color: #000000;
+  background: #fff;
+  border-radius: 2px;
+}
+
+ul.sub-menu li a:hover,
+ul.sub-menu li a.active {
+  color: #fff !important;
+  font-weight: 600 !important;
+  background: #00cb96 !important;
+  text-shadow: 1px 1.5px #737373 !important;
+}
+
+.sidebar ul li a:hover .links_name,
+.sidebar ul li a.active .links_name {
+  text-shadow: none;
+}
+
+.sidebar ul li a i {
+  margin-right: 5px;
+  min-width: 25px;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.sidebar.active ul li a .fa-caret-down.arrow-rotate {
+  transform: rotate(-180deg);
+}
+
+.sidebar .profile_content {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+}
+
+.sub-menu {
+  margin: 0 !important;
+  position: static !important;
+  display: none !important;
+}
+
+.sidebar.active .nav_list li .sub-menu.show {
+  display: block !important;
+}
+
+.sub-menu li {
+  padding-left: 25px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.sidebar.active ~ .content-blk {
+  width: calc(100% - 180px);
+  left: 180px;
+}

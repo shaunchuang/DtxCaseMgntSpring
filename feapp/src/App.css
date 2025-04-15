@@ -1,0 +1,40 @@
+/* 這個檔案只為非認證部分的應用提供樣式 */
+/* 登入和註冊頁面使用 Authentication.css */
+
+/* 應用logo的樣式，作用域更明確，避免影響登入頁面 */
+.app-logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.app-logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.app-logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .app-logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Dashboard 特定樣式 */
+.app-card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}

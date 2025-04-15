@@ -1,0 +1,71 @@
+/* 子標題欄樣式 */
+.sub-bar {
+  background: #d7e6f4;	
+  height: auto;
+  padding: 0px 15px;
+}
+
+.item-title, .sub-func {
+  padding: 10px 0;
+  display: flex;
+}
+
+.sub-func {
+  font-size: 16px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.sub-func > .inner-addon { 
+  position: relative;
+  margin-right: 10px; 
+}
+
+.sub-func > .inner-addon > span {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.sub-func > .right-addon > span { 
+  top: -1px;
+  right: 0px;
+}
+
+.right-addon input {
+  width: 300px; 
+  padding-right: 30px;
+  border-radius: 20px; 	
+}
+
+.item-title > .item-name,
+.item-title > .patient-hint {
+  font-weight: 600;
+}
+
+.item-title > .item-name:before {
+  content: "  ";
+  display: inline-block;
+  position: relative;
+  top: 2.5px;
+  width: 0.8rem;
+  height: 2rem;
+  margin-right: 0.8rem;
+  background-size: 100%;
+  background-image: linear-gradient(to bottom, #00b19c, #00b19c);
+}
+
+.item-title > .item-name {
+  font-size: 1.5em;	
+  color: #404040;	
+}
+
+.item-title > .patient-hint {
+  margin-left: 15px;
+  font-size: 1.1em;
+  color: #ffffff;
+  background: #737373;
+  padding: 4px 10px;
+  border-radius: 5px;
+}
