@@ -32,4 +32,37 @@ public class TrainingStatistics implements Serializable {
 
     public TrainingStatistics() {}
     // getters and setters ...
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public TrainingRecord getTrainingRecord() {
+        return trainingRecord;
+    }
+
+    public void setTrainingRecord(TrainingRecord trainingRecord) {
+        this.trainingRecord = trainingRecord;
+    }
+
+    public StatisticsGoal getStatisticsGoal() {
+        return statisticsGoal;
+    }
+
+    public void setStatisticsGoal(StatisticsGoal statisticsGoal) {
+        this.statisticsGoal = statisticsGoal;
+    }
+
+    public Double getStatValue() {
+        return statValue;
+    }
+
+    public void setStatValue(Double statValue) {
+        this.statValue = statValue;
+    }
+    
 }

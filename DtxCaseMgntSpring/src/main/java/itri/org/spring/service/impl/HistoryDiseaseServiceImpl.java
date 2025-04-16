@@ -7,8 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -33,12 +35,20 @@ public class HistoryDiseaseServiceImpl implements HistoryDiseaseService {
 
     @Override
     public List<HistoryDisease> findByName(String name) {
-        return historyDiseaseRepository.findByName(name);
+        HistoryDisease historyDisease = historyDiseaseRepository.findByName(name);
+        List<HistoryDisease> result = new ArrayList<>();
+        if (historyDisease != null) {
+            result.add(historyDisease);
+        }
+        return result;
     }
 
     @Override
     public List<HistoryDisease> findByNameContaining(String keyword) {
-        return historyDiseaseRepository.findByNameContaining(keyword);
+        // 由於沒有現成的repository方法，使用findAll加上過濾
+        return historyDiseaseRepository.findAll().stream()
+                .filter(disease -> disease.getName() != null && disease.getName().contains(keyword))
+                .collect(Collectors.toList());
     }
 
     @Override

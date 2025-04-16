@@ -78,5 +78,4 @@ public class Appointment implements Serializable {
         this.collaborateId = collaborateId;
     }
 
-    // getters and setters ...
 }

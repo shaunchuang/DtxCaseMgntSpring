@@ -36,4 +36,45 @@ public class TrainingAchievement implements Serializable {
 
     public TrainingAchievement() {}
     // getters and setters ...
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public TrainingRecord getTrainingRecord() {
+        return trainingRecord;
+    }
+
+    public void setTrainingRecord(TrainingRecord trainingRecord) {
+        this.trainingRecord = trainingRecord;
+    }
+
+    public AchievementGoal getAchievementGoal() {
+        return achievementGoal;
+    }
+
+    public void setAchievementGoal(AchievementGoal achievementGoal) {
+        this.achievementGoal = achievementGoal;
+    }
+
+    public boolean isUnlocked() {
+        return isUnlocked;
+    }
+
+    public void setUnlocked(boolean isUnlocked) {
+        this.isUnlocked = isUnlocked;
+    }
+
+    public java.util.Date getUnlockTime() {
+        return unlockTime;
+    }
+
+    public void setUnlockTime(java.util.Date unlockTime) {
+        this.unlockTime = unlockTime;
+    }
+    
 }

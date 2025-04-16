@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "\"patient\"")
@@ -63,16 +64,127 @@ public class Patient implements Serializable {
     @JoinTable(name = "\"patient_history_disease\"",
         joinColumns = @JoinColumn(name = "patient_id"),
         inverseJoinColumns = @JoinColumn(name = "history_disease_id"))
-    private java.util.List<HistoryDisease> historyDisease;
+    private List<HistoryDisease> historyDiseases;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(name = "\"patient_medical_history\"",
         joinColumns = @JoinColumn(name = "patient_id"),
         inverseJoinColumns = @JoinColumn(name = "medical_history_id"))
-    private java.util.List<MedicalHistory> medicalHistory;
+    private List<MedicalHistory> medicalHistories;
 
     @Column(name = "\"disease_id\"")
     private Long diseaseId;
 
-    // getters and setters ...
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getIdno() {
+        return idno;
+    }
+
+    public void setIdno(String idno) {
+        this.idno = idno;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Date getBirth() {
+        return birth;
+    }
+
+    public void setBirth(Date birth) {
+        this.birth = birth;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getDistrict() {
+        return district;
+    }
+
+    public void setDistrict(String district) {
+        this.district = district;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getEmergencyContact() {
+        return emergencyContact;
+    }
+
+    public void setEmergencyContact(String emergencyContact) {
+        this.emergencyContact = emergencyContact;
+    }
+
+    public String getEmergencyPhone() {
+        return emergencyPhone;
+    }
+
+    public void setEmergencyPhone(String emergencyPhone) {
+        this.emergencyPhone = emergencyPhone;
+    }
+
+    public String getEmergencyRelation() {
+        return emergencyRelation;
+    }
+
+    public void setEmergencyRelation(String emergencyRelation) {
+        this.emergencyRelation = emergencyRelation;
+    }
+
+    public List<HistoryDisease> getHistoryDiseases() {
+        return historyDiseases;
+    }
+
+    public void setHistoryDiseases(List<HistoryDisease> historyDiseases) {
+        this.historyDiseases = historyDiseases;
+    }
+
+    public List<MedicalHistory> getMedicalHistories() {
+        return medicalHistories;
+    }
+
+    public void setMedicalHistories(List<MedicalHistory> medicalHistories) {
+        this.medicalHistories = medicalHistories;
+    }
+
+    public Long getDiseaseId() {
+        return diseaseId;
+    }
+
+    public void setDiseaseId(Long diseaseId) {
+        this.diseaseId = diseaseId;
+    }
+
 }

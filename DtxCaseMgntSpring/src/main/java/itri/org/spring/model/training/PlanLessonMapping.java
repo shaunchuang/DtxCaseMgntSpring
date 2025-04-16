@@ -32,4 +32,53 @@ public class PlanLessonMapping implements Serializable {
 
     public PlanLessonMapping() {}
     // getters and setters ...
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public TrainingPlan getTrainingPlan() {
+        return trainingPlan;
+    }
+
+    public void setTrainingPlan(TrainingPlan trainingPlan) {
+        this.trainingPlan = trainingPlan;
+    }
+
+    public Long getLessonId() {
+        return lessonId;
+    }
+
+    public void setLessonId(Long lessonId) {
+        this.lessonId = lessonId;
+    }
+
+    public Integer getOrderIndex() {
+        return orderIndex;
+    }
+
+    public void setOrderIndex(Integer orderIndex) {
+        this.orderIndex = orderIndex;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+    
 }

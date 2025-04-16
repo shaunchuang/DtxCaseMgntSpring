@@ -30,4 +30,37 @@ public class StatisticsGoal implements Serializable {
 
     public StatisticsGoal() {}
     // getters and setters ...
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getMappingId() {
+        return mappingId;
+    }
+
+    public void setMappingId(Long mappingId) {
+        this.mappingId = mappingId;
+    }
+
+    public String getApiName() {
+        return apiName;
+    }
+
+    public void setApiName(String apiName) {
+        this.apiName = apiName;
+    }
+
+    public String getValueGoal() {
+        return valueGoal;
+    }
+
+    public void setValueGoal(String valueGoal) {
+        this.valueGoal = valueGoal;
+    }
+    
 }

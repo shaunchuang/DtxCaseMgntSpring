@@ -69,6 +69,7 @@
 .dropdown {
   display: inline-block;
   margin-left: 10px;
+  position: relative;
 }
 
 .btn-secondary {
@@ -76,10 +77,51 @@
   border: none;
 }
 
-.dropdown-menu {
+/* Custom dropdown menu styling to override Bootstrap */
+.top-bar .dropdown-menu {
   min-width: 100px;
   right: 0;
   left: auto !important;
+  position: absolute;
+  top: 100%;
+  z-index: 1000;
+  display: none;
+  float: left;
+  padding: 0.25rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 0.9rem;
+  color: #212529;
+  text-align: center;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.top-bar .dropdown-menu.show {
+  display: block;
+}
+
+.top-bar .dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.2rem 0.75rem !important;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.top-bar .dropdown-item:hover, .top-bar .dropdown-item:focus {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa;
 }
 
 .archive-info {

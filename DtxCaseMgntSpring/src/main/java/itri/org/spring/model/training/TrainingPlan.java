@@ -69,4 +69,109 @@ public class TrainingPlan implements Serializable {
 
     public TrainingPlan() {}
     // getters and setters ...
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getTherapistId() {
+        return therapistId;
+    }
+
+    public void setTherapistId(Long therapistId) {
+        this.therapistId = therapistId;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    public Integer getFrequencyPerWeek() {
+        return frequencyPerWeek;
+    }
+
+    public void setFrequencyPerWeek(Integer frequencyPerWeek) {
+        this.frequencyPerWeek = frequencyPerWeek;
+    }
+
+    public Integer getFrequencyPerDay() {
+        return frequencyPerDay;
+    }
+
+    public void setFrequencyPerDay(Integer frequencyPerDay) {
+        this.frequencyPerDay = frequencyPerDay;
+    }
+
+    public Integer getDurationPerSession() {
+        return durationPerSession;
+    }
+
+    public void setDurationPerSession(Integer durationPerSession) {
+        this.durationPerSession = durationPerSession;
+    }
+
+    public String getNotes() {
+        return notes;
+    }
+
+    public void setNotes(String notes) {
+        this.notes = notes;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public List<TrainingRecord> getTrainingRecords() {
+        return trainingRecords;
+    }
+
+    public void setTrainingRecords(List<TrainingRecord> trainingRecords) {
+        this.trainingRecords = trainingRecords;
+    }
+
+    public java.util.List<PlanLessonMapping> getPlanLessonMappings() {
+        return planLessonMappings;
+    }
+
+    public void setPlanLessonMappings(java.util.List<PlanLessonMapping> planLessonMappings) {
+        this.planLessonMappings = planLessonMappings;
+    }
+    
 }

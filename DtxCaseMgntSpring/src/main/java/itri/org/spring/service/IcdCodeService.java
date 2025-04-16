@@ -73,4 +73,10 @@ public interface IcdCodeService {
      * @param modifierId 修改者ID
      */
     void markIcdCodeAsDeleted(Long id, Long modifierId);
+
+    List<IcdCode> findByNameKeyword(String nameKeyword);
+    List<IcdCode> findByEnNameKeyword(String enNameKeyword);
+    IcdCode deleteIcdCode(Long id, Long modifierId);
+    void deleteIcdCode(Long id);
+
 }

@@ -10,6 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -49,7 +50,10 @@ public class AvailableSlotServiceImpl implements AvailableSlotService {
 
     @Override
     public List<AvailableSlot> findByIsBooked(Boolean isBooked) {
-        return availableSlotRepository.findByIsBooked(isBooked);
+        // 使用 findAll() 然後過濾
+        return availableSlotRepository.findAll().stream()
+                .filter(slot -> isBooked.equals(slot.getIsBooked()))
+                .collect(Collectors.toList());
     }
 
     @Override

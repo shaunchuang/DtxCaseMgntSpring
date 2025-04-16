@@ -49,5 +49,86 @@ public class HealthInsuranceRecord implements Serializable {
     @Column(name = "\"serial_num\"", length = 50)
     private String serialNum;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
+    public String getSubjective() {
+        return subjective;
+    }
+
+    public void setSubjective(String subjective) {
+        this.subjective = subjective;
+    }
+
+    public String getObjective() {
+        return objective;
+    }
+
+    public void setObjective(String objective) {
+        this.objective = objective;
+    }
+
+    public String getMainDiagnosisCode() {
+        return mainDiagnosisCode;
+    }
+
+    public void setMainDiagnosisCode(String mainDiagnosisCode) {
+        this.mainDiagnosisCode = mainDiagnosisCode;
+    }
+
+    public List<String> getSecondaryDiagnosisCodes() {
+        return secondaryDiagnosisCodes;
+    }
+
+    public void setSecondaryDiagnosisCodes(List<String> secondaryDiagnosisCodes) {
+        this.secondaryDiagnosisCodes = secondaryDiagnosisCodes;
+    }
+
+    public String getCopaymentCode() {
+        return copaymentCode;
+    }
+
+    public void setCopaymentCode(String copaymentCode) {
+        this.copaymentCode = copaymentCode;
+    }
+
+    public int getTotalPoint() {
+        return totalPoint;
+    }
+
+    public void setTotalPoint(int totalPoint) {
+        this.totalPoint = totalPoint;
+    }
+
+    public int getCopayment() {
+        return copayment;
+    }
+
+    public void setCopayment(int copayment) {
+        this.copayment = copayment;
+    }
+
+    public String getSerialNum() {
+        return serialNum;
+    }
+
+    public void setSerialNum(String serialNum) {
+        this.serialNum = serialNum;
+    }
+
     // getters and setters ...
+    
 }

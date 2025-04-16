@@ -41,7 +41,7 @@ public interface PatientService {
      * @param keyword 關鍵字
      * @return 個案列表
      */
-    List<Patient> findByNameContaining(String keyword);
+    List<Patient> findByNameKeyword(String keyword);
     
     /**
      * 根據性別查找個案
@@ -129,4 +129,12 @@ public interface PatientService {
      * @param id 個案ID
      */
     void deletePatient(Long id);
+
+    /**
+     * 根據生日範圍查找個案
+     * @param start 開始日期
+     * @param end 結束日期
+     * @return 個案列表
+     */
+    List<Patient> findByBirthRange(Date start, Date end);
 }

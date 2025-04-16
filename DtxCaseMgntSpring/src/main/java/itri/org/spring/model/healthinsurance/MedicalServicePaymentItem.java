@@ -50,5 +50,110 @@ public class MedicalServicePaymentItem implements Serializable {
     @Column(name = "\"deletemark\"")
     private Boolean deleteMark;
 
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
+    public int getPoints() {
+        return points;
+    }
+
+    public void setPoints(int points) {
+        this.points = points;
+    }
+
+    public String getBeginDate() {
+        return beginDate;
+    }
+
+    public void setBeginDate(String beginDate) {
+        this.beginDate = beginDate;
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+    }
+
+    public String getZhItem() {
+        return zhItem;
+    }
+
+    public void setZhItem(String zhItem) {
+        this.zhItem = zhItem;
+    }
+
+    public String getEnItem() {
+        return enItem;
+    }
+
+    public void setEnItem(String enItem) {
+        this.enItem = enItem;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public Date getModifyTime() {
+        return modifyTime;
+    }
+
+    public void setModifyTime(Date modifyTime) {
+        this.modifyTime = modifyTime;
+    }
+
+    public Long getCreator() {
+        return creator;
+    }
+
+    public void setCreator(Long creator) {
+        this.creator = creator;
+    }
+
+    public Long getModifier() {
+        return modifier;
+    }
+
+    public void setModifier(Long modifier) {
+        this.modifier = modifier;
+    }
+
+    public Boolean getDeleteMark() {
+        return deleteMark;
+    }
+
+    public void setDeleteMark(Boolean deleteMark) {
+        this.deleteMark = deleteMark;
+    }
+
     // getters and setters ...
+    
 }
