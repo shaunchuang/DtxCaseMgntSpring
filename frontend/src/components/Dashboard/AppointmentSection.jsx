@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import Clock from './Clock';
 import './AppointmentSection.css';
 
@@ -10,10 +11,14 @@ const AppointmentSection = () => {
     abnormalCases: 0
   });
 
-  // In a real application, this would fetch data from an API
   useEffect(() => {
-    // Mock data - in a real app, this would come from a backend API
-    // setAppointmentEvents(fetchedData);
+    axios.get('/api/appointments/today', { withCredentials: true })
+      .then(response => {
+        setAppointmentEvents(response.data);
+      })
+      .catch(error => {
+        console.error('Error fetching appointments:', error);
+      });
   }, []);
 
   return (
